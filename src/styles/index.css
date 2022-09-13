@@ -1,0 +1,183 @@
+/* Header font */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@100;300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body,
+  html {
+    @apply w-screen font-sans bg-[#FAF3F2] overflow-x-hidden scroll-smooth;
+  }
+}
+
+@layer components {
+  .contact__button {
+    @apply w-32 h-8 font-bold text-burgerPalette-title_black_87 bg-burgerPalette-yellow rounded flex items-center justify-center gap-2;
+  }
+
+  .hamb__menu__box {
+    @apply z-10 xl:hidden w-[30px] h-[30px] mr-2 bg-burgerPalette-title_black_38/10 rounded flex items-center justify-center;
+  }
+
+  .menu__text {
+    @apply hover:text-burgerPalette-title_black_87 hover:font-bold sm:tracking-[0.05px] sm:hover:tracking-normal;
+  }
+
+  .mob__menu__icon {
+    @apply w-8 h-8 cursor-pointer;
+  }
+
+  .main__title {
+    @apply font-heading text-main__title uppercase text-burgerPalette-brown [&>*]:text-burgerPalette-yellow;
+  }
+
+  .hero__subTitle {
+    @apply font-heading text-main__sub__title text-burgerPalette-title_black_38/90;
+  }
+
+  .hero__paragraph {
+    @apply text-main__sub__title text-burgerPalette-title_black_38/70 [&>*]:font-[900] [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md;
+  }
+
+  .section__ofertas__title {
+    @apply text-[32px] font-heading leading-9 uppercase text-burgerPalette-title_black_38/90;
+  }
+
+  .section__ofertas__sub {
+    @apply mt-1 text-burgerPalette-title_black_38/70 leading-5;
+  }
+
+  .cards {
+    @apply max-w-[970px] w-full mx-auto lg:h-[118px] mt-[45vh] sm:-mt-[2vh] p-9 bg-white rounded-xl drop-shadow-cardsShadow flex flex-col lg:flex-row items-center justify-between gap-4;
+  }
+
+  .card {
+    @apply w-72 h-[83px] p-2 border-b lg:border-b-0 lg:border-r border-burgerPalette-title_black_87/20 flex items-center gap-[18px];
+  }
+
+  .card__img {
+    @apply w-[60px] h-[60px] aspect-square bg-burgerPalette-beige rounded-full flex items-center justify-center;
+  }
+
+  .card__content {
+    @apply w-[170px];
+  }
+
+  .card__title {
+    @apply text-burgerPalette-title_black_38/80 font-heading uppercase text-xl;
+  }
+
+  .card__text {
+    @apply text-burgerPalette-title_black_38/70;
+  }
+
+  .grid__ofertas {
+    @apply w-full h-auto mt-4 grid grid-cols-[1fr] place-items-center xl:grid-cols-[770px_371px] gap-4;
+  }
+
+  .main__card__oferta__title {
+    @apply text-card__oferta__title font-heading text-white uppercase;
+  }
+
+  .main__card__oferta__sub {
+    @apply -mt-1 text-lg text-white;
+  }
+
+  .main__card__oferta__day {
+    @apply text-white/70 text-card__oferta__day leading-4 lg:leading-7 [&>*]:font-heading [&>*]:uppercase [&>*]:text-card__oferta__day__span [&>*]:text-white;
+  }
+
+  .sub__card__oferta_title {
+    @apply uppercase font-heading text-xl text-burgerPalette-title_black_38/90;
+  }
+
+  .sub__card__oferta_sub {
+    @apply -mt-1 text-lg text-white text-burgerPalette-title_black_38/70;
+  }
+
+  .card__workshift__open {
+    @apply max-w-[571px] w-full py-2 lg:py-5 px-[5px] lg:px-3 rounded-[10px] bg-green-600 flex items-center gap-2;
+  }
+
+  .card__workshift__closed {
+    @apply max-w-[571px] w-full py-2 lg:py-5 px-[5px] lg:px-3 rounded-[10px] bg-burgerPalette-red flex items-center gap-2;
+  }
+
+  .card__workshift__timmer {
+    @apply card__img w-[73px] h-[73px] lg:w-[93px] lg:h-[93px] p-4 bg-burgerPalette-title_black_38/20;
+  }
+
+  .card__workshift__tittle {
+    @apply text-[15px] lg:text-2xl font-heading text-burgerPalette-title_black_38/70 uppercase;
+  }
+
+  .card__workshift__dayshift {
+    @apply text-card__horario__semana lg:font-bold lg:[&>*]:font-black text-white/[0.85];
+  }
+
+  .cardapio__cta__container {
+    @apply w-full lg:h-[575px] m-auto px-6 py-10 bg-[url("/assets/banner-menu-mobile.png")] lg:bg-[url("/assets/banner-menu.png")] bg-no-repeat lg:bg-cover;
+  }
+
+  .cardapio__cta__content {
+    @apply w-[90%] lg:w-[55%] lg:mt-[130px] lg:ml-[40%];
+  }
+
+  .cardapio__cta__title {
+    @apply main__title text-2xl lg:text-[41px] leading-snug [&>*]:text-burgerPalette-brown [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md;
+  }
+
+  .cardapio__cta__subtitle {
+    @apply mt-2 text-sm lg:text-base;
+  }
+
+  .cardapio__cta__button {
+    @apply mt-2 contact__button w-52 h-11 text-white bg-burgerPalette-red;
+  }
+
+  .cardapio__menu {
+    @apply w-full px-6 bg-burgerPalette-brown;
+  }
+
+  .cardapio__menu__title {
+    @apply lg:hidden text-2xl font-heading text-burgerPalette-yellow uppercase mt-[54px];
+  }
+
+  .cardapio__plate {
+    @apply lg:w-[60%] my-6 lg:my-10;
+  }
+
+  .cardapio__plate__name {
+    @apply text-xl font-heading text-burgerPalette-beige/90 uppercase flex justify-between;
+  }
+
+  .cardapio__plate__ingrd {
+    @apply text-sm text-white;
+  }
+}
+
+@layer utilities {
+  .header__section {
+    @apply fixed z-10 w-full h-16 bg-burgerPalette-brown/5 backdrop-blur-md flex items-center justify-between;
+  }
+
+  .hero__section {
+    @apply w-full m-auto px-6 bg-[url("/assets/banner-hero-mobile.png")] sm:bg-[url("/assets/banner-hero.png")] bg-no-repeat;
+  }
+
+  .section__content {
+    @apply max-w-[1170px] w-full mx-auto;
+  }
+
+  .menu__mobile__on {
+    @apply fixed top-0 right-0 h-screen w-[75%] pl-8 pt-28 bg-burgerPalette-title_black_38/50 backdrop-blur-lg ease-in-out duration-200 flex flex-col;
+  }
+
+  .menu__mobile__off {
+    @apply fixed top-0 right-[-100%] h-screen w-[75%] pl-8 pt-28 bg-burgerPalette-title_black_38/50 backdrop-blur-lg ease-in-out duration-200 flex flex-col;
+  }
+}
